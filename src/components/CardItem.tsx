@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "react";
 
-export function DraggableCard({ children }: PropsWithChildren) {
+export const CardItem = ({ children }: PropsWithChildren): JSX.Element => {
   return (
     <div
       style={{
@@ -32,4 +32,4 @@ export function DraggableCard({ children }: PropsWithChildren) {
       </div>
     </div>
   );
-}
+};
