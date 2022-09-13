@@ -23,11 +23,13 @@ export const SortableItem = ({
     transition,
     opacity: isDragging ? "0.1" : "1",
     color: "black",
+    background: "white",
+    padding: "1.5rem",
   };
 
   return (
     <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      {children}
+      <div>{children}</div>
     </div>
   );
 };
