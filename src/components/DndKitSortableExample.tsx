@@ -14,6 +14,26 @@ import type {
   UniqueIdentifier,
 } from "@dnd-kit/core";
 import { SortableContainer } from "./SortableContainer";
+import { data } from "autoprefixer";
+
+const useMultipleSortable = () => {
+  return {
+    DndContext: () => <DndContext onDragEnd={() => {}} />,
+  };
+};
+
+const Foo = () => {
+  const { DndContext } = useMultipleSortable();
+
+  return <DndContext />;
+};
+
+// const items = [
+//   state1: ["1", "2"],
+//   state2: ["3", "4"],
+//   state3: [],
+// ]
+// <DndContext state={items} render={(data) => <Item>{data.id}</Item>} />
 
 export const DndKitSortableExample = (): JSX.Element => {
   const [items, setItems] = useState<{ [key: string]: string[] }>({
